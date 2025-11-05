@@ -18,6 +18,7 @@
     blueman
     swayidle
     swaylock
+    xwayland-satellite
   ];
 
   fonts.packages = with pkgs; [

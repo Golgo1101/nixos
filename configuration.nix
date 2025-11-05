@@ -11,6 +11,7 @@
       ./niri.nix
       ./flatpak.nix
       ./podman.nix
+      ./steam.nix
     ];
 
   # Bootloader.
@@ -40,6 +41,11 @@
     open = true;
     nvidiaSettings = true;
   };
+
+  fileSystems."/mnt/discSSD" =
+    { device = "/dev/disk/by-uuid/3a55c8ef-12c5-458e-b635-852955dd2328";
+      fsType = "ext4";
+    };
 
   # Set your time zone.
   time.timeZone = "Europe/Madrid";
